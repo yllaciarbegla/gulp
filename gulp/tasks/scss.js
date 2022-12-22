@@ -18,7 +18,7 @@ export const scss = () => {
 		.pipe(autoprefixer({
 			overrideBrowserslist: ['last 3 versions']
 		}))
-		.pipe(app.gulp.dest(app.path.build.css)) // Not .min file
+		.pipe(app.gulp.dest(app.path.build.css))
 		.pipe(cleanCss())
 		.pipe(rename({
 			extname: '.min.css'
