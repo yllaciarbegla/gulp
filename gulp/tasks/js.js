@@ -8,7 +8,15 @@ export const js = () => {
 			mode: 'development',
 			output: {
 				filename: 'index.js'
-			}
+			},
+			module: {
+				rules: [
+					{
+						test: /\.(sass|less|css)$/,
+						use: ["style-loader", "css-loader", 'sass-loader'],
+					},
+				],
+			},
 		}))
 		.pipe(app.gulp.dest(app.path.build.js))
 		.pipe(uglify())
