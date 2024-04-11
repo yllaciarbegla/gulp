@@ -1,3 +1,3 @@
-import * as webpCheck from './modules/webp.js'
+import * as webpCheck from './modules/webp-check.js'
 
 webpCheck.isWebp();
